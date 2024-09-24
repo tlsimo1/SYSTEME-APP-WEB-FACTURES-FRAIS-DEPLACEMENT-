@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Repots\DataSetFrais.Designer.cs" />
+    <Content Remove="wwwroot\Repots\DataSetFrais.xsc" />
+    <Content Remove="wwwroot\Repots\DataSetFrais.xsd" />
+    <Content Remove="wwwroot\Repots\DataSetFrais.xss" />
+    <Content Remove="wwwroot\Repots\GetAll_Facure.rdlc" />
+    <Content Remove="wwwroot\Repots\GetFraisParModeRegelement.Designer.cs" />
+    <Content Remove="wwwroot\Repots\GetFraisParModeRegelement.rdlc" />
+    <Content Remove="wwwroot\Repots\GetFraisParModeRegelement.xsc" />
+    <Content Remove="wwwroot\Repots\GetFraisParModeRegelement.xsd" />
+    <Content Remove="wwwroot\Repots\GetFraisParModeRegelement.xss" />
+    <Content Remove="wwwroot\Repots\GetFrais_avancement.rdlc" />
+    <Content Remove="wwwroot\Repots\Get_Circulation.rdlc" />
+    <Content Remove="wwwroot\Repots\Get_FraisANT.rdlc" />
+    <Content Remove="wwwroot\Repots\Get_FraisProv.rdlc" />
+    <Content Remove="wwwroot\Repots\Get_Frais_Avancement.cs" />
+    <Content Remove="wwwroot\Repots\Get_Frais_Avancement.Designer.cs" />
+    <Content Remove="wwwroot\Repots\Get_Frais_Avancement.xsc" />
+    <Content Remove="wwwroot\Repots\Get_Frais_Avancement.xsd" />
+    <Content Remove="wwwroot\Repots\Get_Frais_Avancement.xss" />
+    <Content Remove="wwwroot\Repots\Report1.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="wwwroot\Repots\DataSetFrais.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSetFrais.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Repots\GetFraisParModeRegelement.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GetFraisParModeRegelement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Repots\Get_Frais_Avancement.cs" />
+    <Compile Include="wwwroot\Repots\Get_Frais_Avancement.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Repots\GetAll_Facure.rdlc" />
+    <EmbeddedResource Include="wwwroot\Repots\GetFraisParModeRegelement.rdlc" />
+    <EmbeddedResource Include="wwwroot\Repots\GetFrais_avancement.rdlc" />
+    <EmbeddedResource Include="wwwroot\Repots\Get_Circulation.rdlc" />
+    <EmbeddedResource Include="wwwroot\Repots\Get_FraisANT.rdlc" />
+    <EmbeddedResource Include="wwwroot\Repots\Get_FraisProv.rdlc" />
+    <EmbeddedResource Include="wwwroot\Repots\Report1.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1652.0" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WinForms" Version="140.340.80" />
+    <PackageReference Include="Microsoft.ReportViewer.Common" Version="10.0.40219.1" />
+    <PackageReference Include="Microsoft.ReportViewer.WebForms" Version="10.0.40219.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.12" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.21" />
+    <PackageReference Include="System.CodeDom" Version="8.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.6" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CrystalReports\" />
+    <Folder Include="ReportDataClient\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Repots\DataSetFrais.xsc" />
+    <None Include="wwwroot\Repots\DataSetFrais.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>DataSetFrais.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Repots\DataSetFrais.xss" />
+    <None Include="wwwroot\Repots\GetFraisParModeRegelement.rdlc" />
+    <None Include="wwwroot\Repots\GetFraisParModeRegelement.xsc" />
+    <None Include="wwwroot\Repots\GetFraisParModeRegelement.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>GetFraisParModeRegelement.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Repots\GetFraisParModeRegelement.xss" />
+    <None Include="wwwroot\Repots\GetFrais_avancement.rdlc" />
+    <None Include="wwwroot\Repots\Get_Frais_Avancement.xsc" />
+    <None Include="wwwroot\Repots\Get_Frais_Avancement.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>Get_Frais_Avancement.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Repots\Get_Frais_Avancement.xss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{c0c07587-41a7-46c8-8fbd-3f9c8ebe2ddc}" />
+  </ItemGroup>
+
+</Project>

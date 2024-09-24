@@ -1,0 +1,140 @@
+﻿@model Blog_MVC.ViewModel.GetUserInfo_ViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Blog_MVC</title>
+
+
+
+
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/Blog_MVC.styles.css" asp-append-version="true" />
+</head>
+<body>
+    @if (Model != null)
+    {
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a class="navbar-brand pb-2" asp-area="" asp-controller="Personnel" asp-action="Index">SYS DIMATIT</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        @if(Model!=null)
+                        {
+                            @if (Model.Roles[0] == "Admin")
+                            {
+                                <li active class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Frais Déplacement
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Personnel" asp-action="Index">Gestion Personnel</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="CodeAnalytique" asp-action="Index">Gestion Code Analytique</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="FraisDeplacement" asp-action="Index">Gestion Frais Déplacement</a></li>
+                                    </ul>
+                                </li>
+
+                                <li active class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Suivie des Factures
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink02">
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="AssistanteDAF" asp-action="AssistanteDAF">Gestion Factures (Assistante DAF)</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Facture" asp-action="Create">Saisie Facture</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Comptable" asp-action="Comptable">Gestion Factures (Comptabilité)</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Achat" asp-action="Achat">Gestion Factures (Achat)</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Chef_Comptable" asp-action="Index">Gestion Factures (Chef Comptable)</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Facture" asp-action="Consultation">Consultation</a></li>
+                                    </ul>
+                                </li>
+                            }
+                            else if (Model.UserName == "n.karim")
+                            {
+                                <li active class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Frais Déplacement
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Personnel" asp-action="Index">Gestion Personnel</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="CodeAnalytique" asp-action="Index">Gestion Code Analytique</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="FraisDeplacement" asp-action="Index">Gestion Frais Déplacement</a></li>
+
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <li active class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Suivie des Factures
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink02">
+                                        @if (Model.UserName == "h.routabi")
+                                        {
+                                            <li><a class="dropdown-item" asp-area="" asp-controller="AssistanteDAF" asp-action="AssistanteDAF">Gestion Factures (Assistante DAF)</a></li>
+                                        }
+                                        else if (Model.UserName == "f.boubarad")
+                                        {
+                                            <li><a class="dropdown-item" asp-area="" asp-controller="Facture" asp-action="Create">Saisie Facture</a></li>
+                                        }
+                                        else if (Model.UserName == "k.rifla")
+                                        {
+                                            <li><a class="dropdown-item" asp-area="" asp-controller="Comptable" asp-action="Comptable">Gestion Factures (Comptabilité)</a></li>
+                                        }
+                                        else if (Model.UserName == "k.chaouki")
+                                        {
+                                            <li><a class="dropdown-item" asp-area="" asp-controller="Achat" asp-action="Achat">Gestion Factures (Achat)</a></li>
+                                        }
+
+                                        else if (Model.UserName == "o.azmi")
+                                        {
+                                            <li><a class="dropdown-item" asp-area="" asp-controller="Chef_Comptable" asp-action="Index">Gestion Factures (Chef Comptable)</a></li>
+                                        }
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Facture" asp-action="Consultation">Consultation</a></li>
+                                    </ul>
+                                </li>
+                            }
+                        }
+                        
+                    </ul>
+                </div>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Bonjour @Model.UserName</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" onclick="LogOut()">LogOut</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    }
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Blog_MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+<script type="text/javascript">
+    function LogOut() {
+        sessionStorage.removeItem("token");
+        location.href = '@Url.Action("LogIn", "LogIn")';
+    }
+</script>

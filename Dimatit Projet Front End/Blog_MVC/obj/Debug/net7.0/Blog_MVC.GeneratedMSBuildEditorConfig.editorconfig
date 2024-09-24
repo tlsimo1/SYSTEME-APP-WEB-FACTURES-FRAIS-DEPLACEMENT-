@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Blog_MVC
+build_property.RootNamespace = Blog_MVC
+build_property.ProjectDir = F:\Nouveau dossier (2)\Dimatit Projet Front End - Copie\Blog_MVC\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\Nouveau dossier (2)\Dimatit Projet Front End - Copie\Blog_MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Achat/Achat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoYXRcQWNoYXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/AssistanteDAF/AssistanteDAF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzaXN0YW50ZURBRlxBc3Npc3RhbnRlREFGLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Chef_Comptable/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlZl9Db21wdGFibGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/CodeAnalytique/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29kZUFuYWx5dGlxdWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Comptable/Comptable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHRhYmxlXENvbXB0YWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Facture/Consultation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyZVxDb25zdWx0YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Facture/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/FraisDeplacement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJhaXNEZXBsYWNlbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/LogIn/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cTG9nSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/LogIn/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cTG9nT3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/LogIn/PageNotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cUGFnZU5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Personnel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Nouveau dossier (2)/Dimatit Projet Front End - Copie/Blog_MVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-oaj60h4nzi

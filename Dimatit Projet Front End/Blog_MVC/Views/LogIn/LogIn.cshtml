@@ -1,0 +1,152 @@
+﻿@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                     class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form>
+                    @*<div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                    </div>*@
+
+                    @*<div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                    </div>*@
+
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" id="txtUsername" class="form-control form-control-lg"
+                               placeholder="UserName" autocomplete="on" />
+                        <label class="form-label" for="form3Example3">Username</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-3">
+                        <input type="password" id="txtPassword" class="form-control form-control-lg"
+                               placeholder=" password" autocomplete="on" />
+                        <label class="form-label" for="form3Example4">Password</label>
+                    </div>
+
+                    @*<div class="d-flex justify-content-between align-items-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-0">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                            <label class="form-check-label" for="form2Example3">
+                                Remember me
+                            </label>
+                        </div>
+                        <a href="#!" class="text-body">Forgot password?</a>
+                    </div>*@
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <a onclick="LogIn()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+                           style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                            Login
+                        </a>
+                       @* <p class="small fw-bold mt-2 pt-1 mb-0">
+                            Don't have an account? <a href="#!"
+                                                      class="link-danger">Register</a>
+                        </p>*@
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#txtUsername').text="";
+        $('#txtPassword').text = "";
+    });
+    function LogIn() {
+
+        var _username = $('#txtUsername');
+        var _password = $('#txtPassword');
+        var username = _username.val();
+        var password = _password.val();
+
+        var obj = new Object();
+        obj.username = username;
+        obj.password = password;
+        obj.grant_type = 'password'
+
+        $.ajax
+            ({
+                type: 'POST',
+                url: 'https://localhost:7146/api/Auth/login',
+                contentType: "application/json;charset=utf-8",
+                //dataType: "json",
+                data: JSON.stringify(obj),
+                async: false,
+                success: function (response) {
+                    
+                    sessionStorage.setItem("token", response.item1);
+                    sessionStorage.setItem("username", response.item2.username);
+                    sessionStorage.setItem("Roles", response.item2.roles);
+                    var roles = response.item2.roles;
+                    if (username == "h.routabi") {
+                        location.href = '@Url.Action("AssistanteDAF", "AssistanteDAF")?username=' + username + '&roles=' + roles;
+                        //location.href = Url.Action("Information", "Admin", new { username = response.item2.username, roles=response.item2.roles })
+                    }
+                    else if (username == "f.boubarad") {
+                        location.href = '@Url.Action("Create", "Facture")?username=' + username + '&roles=' + roles;
+                    }
+                    else if (username == "k.rifla" && roles != null) {
+                        location.href = '@Url.Action("Comptable", "Comptable")?username=' + username + '&roles=' + roles;
+                    }
+                    else if (username == "k.chaouki") {
+                        location.href = '@Url.Action("Achat", "Achat")?username=' + username + '&roles=' + roles;
+                    }
+                    else if (username == "o.azmi") {
+                        location.href = '@Url.Action("Index", "Chef_Comptable")?username=' + username + '&roles=' + roles;
+                    }
+                    else if (response.item2.roles[0] == "Admin" || response.item2.roles[1] == "Admin") {
+                        location.href = '@Url.Action("Index", "Personnel")?username=' + username + '&roles=' + roles;
+                    }
+                    else if (username == "n.karim") {
+                        location.href = '@Url.Action("Index", "Personnel")?username=' + username + '&roles=' + roles;
+                    }
+                },
+
+                complete: function (xhr) {
+                    if (xhr.status=="404") {
+                        alert("Login ou le mot de passe est incorect");
+                    }
+                    if (xhr.status == "401") {
+                        location.href = '@Url.Action("PageNotFound", "LogIn")';
+                    }
+                    
+                },
+                faileur: function (error) {
+                    
+                }
+            });
+
+
+    }
+</script>
+

@@ -1,0 +1,1203 @@
+﻿<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <input type="hidden" class="form-control" id="txt_id" />
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Matricule</label>
+                                    @*<input class="form-control" id="txt_Analytique_id" />*@
+                                    <select class="form-select" id="SelectedListMat" aria-label="Default select example">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Nom</label>
+                                    <input class="form-control" id="txt_Nom" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Code Analytique</label>
+                                    <input class="form-control" id="txt_Code_Analytique" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Frais Kilométrage</label>
+                                    <input class="form-control" id="txt_Frais_Kilometrage" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Frais Déplacement</label>
+                                    <input class="form-control" id="txt_Frais_Deplacement" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Période</label>
+                                    <div class="input-group date" id="datepickerPeriode">
+                                        <input type="text" value="" id="txt_periode" class="form-control" />
+                                        @*<input type="text" id="txt_datePeriodet" class="form-control">*@
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-white d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Circulation</label>
+                                    <select class="form-select" id="SelectedListCirculation" aria-label="Default select example">
+                                        <option value=0>Select</option>
+                                        <option value=1>Réglés</option>
+                                        <option value=2>En cours de signature</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Date Réglement</label>
+                                    <div class="input-group date" id="datepickerModRegelement">
+                                        <input type="text" value="" id="txt_datereglement" class="form-control" />
+                                        @*<input type="text" id="txt_dateRegelement" class="form-control">*@
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-white d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Reprise Frais</label>
+                                    <input class="form-control" id="txt_Reprise_Frais" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Date Avance</label>
+                                    <div class="input-group date" id="datepickerDate_Avance">
+
+                                        <input type="text" value="" id="txt_dateavance" class="form-control" />
+                                        @*<input type="text" id="" class="form-control">*@
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-white d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Montant Avance</label>
+                                    <input class="form-control" id="txt_Montant_Avance" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Ville Région</label>
+                                    <input class="form-control" id="txt_Ville" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Mode Réglement</label>
+                                    <select class="form-select" id="SelectedListModReglement" aria-label="Default select example">
+                                        <option value=0>Select</option>
+                                        <option value=1>Espece</option>
+                                        <option value=2>Virement</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Date Prépration</label>
+                                    <div class="input-group date" id="datepickerDatePreparation">
+                                        @*<input type="text" id="txt_datePreparation" class="form-control">*@
+                                        <input type="text" value="" id="txt_DatePreparation" class="form-control" />
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-white d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="SavePersonnel()">Add</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="UpdtePersonnel();">Update</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    @*<div class="card-header">
+    <h2>Frais Deplacement List</h2>
+    </div>*@
+    <div class="card-body">
+        <div class="card-title">
+            <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="clearTextBox();">
+                +
+            </a>
+
+            <a class="btn btn-outline-primary" onclick="GetFraisAnt()">
+                Etat Frais ANT
+            </a>
+            <a class="btn btn-outline-danger" onclick="GetFraisAvancement()">
+                Etat d'avancement
+            </a>
+            <a class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModalCirculation">
+                Etat Par Frais Circulation
+            </a>
+            <a class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModalReglement">
+                Etat Par Mode Reglement
+            </a>
+            <a class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModalProvision">
+                Etat de Provision
+            </a>
+            @* <a asp-controller="Blog" asp-action="Create" class="btn btn-success">Add New</a> *@
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered" id="PersonnelTable">
+                    <thead>
+                        <tr>
+
+                            <th>Date Saisie</th>
+                            <th>frais Kilometrique</th>
+                            <th>frais Deplacement</th>
+
+                            <th>periode Deplacement</th>
+                            <th>circulation</th>
+                            <th>Date Regelement</th>
+
+                            <th>Reprise Frais</th>
+                            <th>date_Avancementt</th>
+                            <th>Montant Avance</th>
+
+                            <th>Matricule</th>
+                            <th>ville Region</th>
+                            <th>Mode Reglement</th>
+
+                            <th>Date Prépration</th>
+                            <th>Periode De</th>
+                            <th>periode</th>
+
+
+                            @*<th>Analytique_id</th>*@
+                            <th>Action      </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*//////////Modal Mode Regelement//////////*@
+
+
+<div class="modal fade" id="exampleModalReglement" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Mode Regelement</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Mode Réglement</label>
+                    <select class="form-select" id="SelectedListModReglement01" aria-label="Default select example">
+                        <option value=0>Select</option>
+                        <option value=1>Espece</option>
+                        <option value=2>Virement</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="GetFraisModeReglement()">Imprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*//////////Modal par Circulation//////////*@
+
+
+<div class="modal fade" id="exampleModalCirculation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Etat de Circulation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Mode Réglement</label>
+                    <select class="form-select" id="SelectedListCirculation02" aria-label="Default select example">
+                        <option value=0>Select</option>
+                        <option value=1>Réglés</option>
+                        <option value=2>En cours de signature</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="GetFraisCirculationt()">Imprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*//////////Modal Provision//////////*@
+
+
+<div class="modal fade" id="exampleModalProvision" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Saisir la Date Début et Date Fin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Date Début</label>
+                                <div class="input-group date" id="datepickerDateDebut">
+                                    <input type="text" value="" id="txt_DateDebut" class="form-control" />
+                                    @*<input type="text" id="txt_datePeriodet" class="form-control">*@
+                                    <span class="input-group-append">
+                                        <span class="input-group-text bg-white d-block">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Date Fin</label>
+                                <div class="input-group date" id="datepickerDateFin">
+                                    <input type="text" value="" id="txt_DateFin" class="form-control" />
+                                    @*<input type="text" id="txt_datePeriodet" class="form-control">*@
+                                    <span class="input-group-append">
+                                        <span class="input-group-text bg-white d-block">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="GetFraisProvision()">Imprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+@*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css" />
+<script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+<script type="text/javascript">
+    var todayDate = new Date().toISOString().slice(0, 10);
+    var js = jQuery.noConflict(true);
+    var valueSelected;
+    var idPersonnel;
+    var date = new Date();
+    var dateSaisie;
+    //date = new Date(date);
+    date = ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' +
+        ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1)))
+        + '/' + date.getFullYear();
+    //<input type="text" value = "today();" id = "datepicker" />
+    js(document).ready(function () {
+
+
+        js('#txt_DatePreparation').val(date);
+        js('#datepickerDatePreparation').datepicker({
+            format: 'dd/mm/yyyy',
+            "setDate": new Date(),
+            "autoclose": true
+        });
+
+        js('#txt_dateavance').val(date);
+        js('#datepickerDate_Avance').datepicker(
+            {
+                format: 'dd/mm/yyyy',
+                "setDate": new Date(),
+                "autoclose": true
+            });
+
+
+        js('#txt_periode').val(date);
+        js('#datepickerPeriode').datepicker(
+            {
+                format: 'dd/mm/yyyy',
+                "setDate": new Date(),
+                "autoclose": true
+            }
+        );
+
+        js('#txt_datereglement').val(date);
+        js('#datepickerModRegelement').datepicker(
+            {
+                format: 'dd/mm/yyyy',
+                "setDate": new Date(),
+                "autoclose": true
+            }
+        );
+
+        js('#txt_DateDebut').val(date);
+        js('#datepickerDateDebut').datepicker(
+            {
+                format: 'dd/mm/yyyy',
+                "setDate": new Date(),
+                "autoclose": true
+            }
+        );
+
+        js('#txt_DateFin').val(date);
+        js('#datepickerDateFin').datepicker(
+            {
+                format: 'dd/mm/yyyy',
+                "setDate": new Date(),
+                "autoclose": true
+            }
+        );
+
+        // js("#datepicker").on("change", function () {
+        //     var _date = $('#txt_dateRegelement');
+        //     var date = _date.val();
+        //     alert(date)
+        // });
+        LaodFraisDeplacement();
+        LaodSelectListMat();
+        js('#SelectedListMat').on('change', function (e) {
+            var optionSelected = $("option:selected", this);
+            valueSelected = this.value;
+            //var item = $(this);
+            //alert(item.val())
+
+            SetTextInput(valueSelected)
+        });
+
+
+
+    });
+    function toMMDDYYYY(date) {
+        var datePart = date.split("/");
+        var MMDDYYYY = [datePart[1], datePart[0], datePart[2]].join('/');
+        return MMDDYYYY
+    }
+    function SetTextInput(id) {
+        valueSelected = id;
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Personnel/GetBy_Mat_CA?id=' + id,
+            contentType: "application/json;charset=utf-8",
+
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+                $('#txt_Nom').val(data.nom);
+                $('#txt_Code_Analytique').val(data.codeAnalytique);
+
+            },
+            faileur: function (error) {
+            }
+        })
+    }
+    function LaodFraisDeplacement() {
+
+        tableData = [];
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/FraisDeplacement',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.each(data, function (key, value) {
+                    var _edit = "<a class='btn btn-primary' onclick='FunEdit(this)'>Edit</a>"
+                    var _remove = "<a class='btn btn-danger' onclick='FunRemove(this)'>Remove</a>"
+                    var _hddn = "<input type='hidden' id='hddenID' value=" + value.iD_Frais + " >"
+                    var _hddnidPersonnel = "<input type='hidden' id='hddenidPersonnel' value=" + value.personnel_id + " >"
+                    var _action = _hddn + _hddnidPersonnel + _edit + " | " + _remove;
+                    tableData.push([
+
+
+                        value.date_Saisie,
+                        value.frais_Kilometrique,
+                        value.fraisDeplacement,
+
+                        value.periode_Deplacement,
+                        value.circulation,
+                        value.date_Regelement,
+
+                        value.reprise_Frais,
+                        value.date_Avancement,
+                        value.montant_Avance,
+
+                        value.mat_PER,
+                        value.ville_Region,
+                        value.mode_Reglement,
+
+                        value.date_Preparation,
+                        value.periode_De,
+                        value.periode,
+
+
+                        _action]);
+
+                })
+            },
+            complete: function (xhr) {
+
+                if (xhr.status == "401") {
+                    location.href = '@Url.Action("LogIn", "LogIn")';
+                }
+                // else {
+                //     location.href = '@Url.Action("PageNotFound", "LogIn")';
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+        js('#PersonnelTable').DataTable({
+            data: tableData,
+            "scrollX": true,
+            "bDestroy": true,
+            // columns: [
+            //    { title: "ID", data: "date_Saisie" },
+            //    { title: "First Name", data: "frais_Kilometrique" },
+            //    { title: "Change Summary", data: "fraisDeplacement" },
+            //    { title: "Details", data: "periode_Deplacement" },
+            //    { title: "Country", data: "circulation" },
+            //    { title: "ID", data: "date_Regelement" },
+            //    { title: "First Name", data: "reprise_Frais" },
+            //    { title: "Change Summary", data: "date_Avancement" },
+            //    { title: "Details", data: "montant_Avance" },
+            //    { title: "Country", data: "mat_PER" },
+
+            //    { title: "Change Summary", data: "ville_Region" },
+            //    { title: "Details", data: "mode_Reglement" },
+            //    { title: "Country", data: "date_Preparation" },
+            //    { title: "Details", data: "periode_De" },
+            //    { title: "Country", data: "periode" },
+            //    { title: "Action"}
+            //]
+        })
+    }
+    function LaodSelectListMat() {
+
+        $('#SelectedListMat option').remove();
+        $('#SelectedListMat').append("<option value='0'>Select</option>");
+
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Personnel',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.each(data, function (key, value) {
+                    $('#SelectedListMat').append("<option value='" + value.iD_Personnel + "'>" + value.matricule + "</option>");
+
+                })
+            },
+            faileur: function (error) {
+            }
+        })
+
+    }
+    function SavePersonnel() {
+
+        var _isproceed = true;
+        var _iD_Frais = $('#txt_id');
+        var _nom = $('#txt_Nom');
+        var _code_Analytique = $('#txt_Code_Analytique');
+        var _frais_Kilometrage = $('#txt_Frais_Kilometrage');
+        var _frais_Deplacement = $('#txt_Frais_Deplacement');
+        var _periode = $('#txt_periode');
+        var _dateRegelement = $('#txt_datereglement');
+        var _reprise_Frais = $('#txt_Reprise_Frais');
+        var _dateAvance = $('#txt_dateavance');
+        var _montant_Avance = $('#txt_Montant_Avance');
+        var _ville = $('#txt_Ville');
+        var _datePreparation = $('#txt_DatePreparation');
+
+
+        var idFrais = $('#txt_id').val();
+        var selectedListMat = $("#SelectedListMat option:selected").text();
+        var nom = _nom.val();
+        var code_Analytique = _code_Analytique.val();
+        var frais_Kilometrage = _frais_Kilometrage.val();
+        var frais_Deplacement = _frais_Deplacement.val();
+        var periode = _periode.val();
+        var selectedListCirculation = $("#SelectedListCirculation option:selected").text()
+
+        var dateRegelement = _dateRegelement.val();
+        var reprise_Frais = _reprise_Frais.val();
+        var dateAvance = _dateAvance.val();
+        var montant_Avance = _montant_Avance.val();
+        var reprise_Frais = _reprise_Frais.val();
+        var ville = _ville.val();
+        var selectedListModReglement = $("#SelectedListModReglement option:selected").text()
+        var datePreparation = _datePreparation.val();
+
+
+        //alert(periode);
+
+        if (nom == null || nom == '') {
+            _nom.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _nom.css('border-color', '#ccc')
+        }
+        if (code_Analytique == null || code_Analytique == '') {
+            _code_Analytique.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _code_Analytique.css('border-color', '#ccc')
+        }
+        var todayDate = new Date().toISOString().slice(0, 10);
+
+        if (_isproceed) {
+            var obj = new Object();
+            obj.iD_Frais = 0;
+            obj.date_Saisie = todayDate;
+            obj.frais_Kilometrique = frais_Kilometrage;
+            obj.fraisDeplacement = frais_Deplacement;
+            obj.periode_Deplacement = periode.split("/").reverse().join("-");
+            obj.circulation = selectedListCirculation;
+            obj.date_Regelement = dateRegelement.split("/").reverse().join("-");
+            obj.reprise_Frais = reprise_Frais;
+            obj.date_Avancement = dateAvance.split("/").reverse().join("-");
+            obj.montant_Avance = montant_Avance;
+            obj.mat_PER = selectedListMat;
+            obj.ville_Region = ville;
+            obj.mode_Reglement = selectedListModReglement;
+            obj.date_Preparation = datePreparation.split("/").reverse().join("-");
+            obj.periode_De = periode.split("/").reverse().join("-");
+            obj.periode = periode.split("/").reverse().join("-");
+            obj.personnel_id = valueSelected;
+            alert(obj.personnel_id)
+            $.ajax({
+                type: 'POST',
+                url: 'https://localhost:7146/api/FraisDeplacement/CreateFraisDeplacement',
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(obj),
+                headers: {
+                    'Authorization': 'Bearer '
+                        + sessionStorage.getItem("token")
+                },
+                async: false,
+
+                success: function (data) {
+                    $('#exampleModal').modal('hide');
+                    LaodFraisDeplacement();
+                },
+                faileur: function (error) {
+                }
+            })
+        }
+        //clearTextBox();
+    }
+    function FunEdit(element) {
+
+        // $("#txt_Matricule").attr("readonly", true);
+        var id = $(element).closest('tr').find('#hddenID ').val();
+        idPersonnel = $(element).closest('tr').find('#hddenidPersonnel ').val();
+
+
+
+        //clearTextBox();
+        var _code_Analytique = $('#txt_Code_Analytique');
+        _code_Analytique.css('border-color', '');
+        var _nom = $('#txt_nom');
+        _nom.css('border-color', '')
+        //var id = $('#txt_id').val();
+        // if (id=!null && id=!'')
+        // {
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/FraisDeplacement/GetFraisDeplacementById?id=' + id,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+                // $.each(data, function (key, value) {
+                //     alert(key + " " + value.periode_Deplacement.)
+                // })
+                // if (data!=null)
+                // {
+                var periode_Deplacement = new Date(data.periode_Deplacement);
+                periode_Deplacement = ((periode_Deplacement.getDate() > 9) ? periode_Deplacement.getDate() : ('0' + periode_Deplacement.getDate())) + '/' +
+                    ((periode_Deplacement.getMonth() > 8) ? (periode_Deplacement.getMonth() + 1) : ('0' + (periode_Deplacement.getMonth() + 1)))
+                    + '/' + periode_Deplacement.getFullYear();
+
+
+                var date_Regelement = new Date(data.date_Regelement);
+                date_Regelement = ((date_Regelement.getDate() > 9) ? date_Regelement.getDate() : ('0' + date_Regelement.getDate())) + '/' +
+                    ((date_Regelement.getMonth() > 8) ? (date_Regelement.getMonth() + 1) : ('0' + (date_Regelement.getMonth() + 1)))
+                    + '/' + date_Regelement.getFullYear();
+
+                var date_Avancement = new Date(data.date_Avancement);
+                date_Avancement = ((date_Avancement.getDate() > 9) ? date_Avancement.getDate() : ('0' + date_Avancement.getDate())) + '/' +
+                    ((date_Avancement.getMonth() > 8) ? (date_Avancement.getMonth() + 1) : ('0' + (date_Avancement.getMonth() + 1)))
+                    + '/' + date_Avancement.getFullYear();
+
+
+
+                var date_Preparation = new Date(data.date_Preparation);
+                date_Preparation = ((date_Preparation.getDate() > 9) ? date_Preparation.getDate() : ('0' + date_Preparation.getDate())) + '/' +
+                    ((date_Preparation.getMonth() > 8) ? (date_Preparation.getMonth() + 1) : ('0' + (date_Preparation.getMonth() + 1)))
+                    + '/' + date_Preparation.getFullYear();
+
+
+
+                dateSaisie = new Date(data.date_Saisie);
+                dateSaisie = ((dateSaisie.getDate() > 9) ? dateSaisie.getDate() : ('0' + dateSaisie.getDate())) + '/' +
+                    ((dateSaisie.getMonth() > 8) ? (dateSaisie.getMonth() + 1) : ('0' + (dateSaisie.getMonth() + 1)))
+                    + '/' + dateSaisie.getFullYear();
+
+
+                alert(dateSaisie);
+
+                $("#exampleModalLabel").text("Update");
+                SetTextInput(idPersonnel);
+
+                $('#txt_id').val(data.iD_Frais);
+                //$('#txt_Nom').val(data.);
+                //$('#txt_Code_Analytique').val(data.);
+
+                $("#SelectedListMat option:selected").text(data.mat_PER);
+                $('#txt_Frais_Kilometrage').val(data.frais_Kilometrique);
+                $('#txt_Frais_Deplacement').val(data.fraisDeplacement);
+                $('#txt_periode').val(periode_Deplacement);
+                $('#txt_datereglement').val(date_Regelement);
+                $('#txt_Reprise_Frais').val(data.reprise_Frais);
+                $('#txt_dateavance').val(date_Avancement);
+                $('#txt_Montant_Avance').val(data.montant_Avance);
+                $('#txt_Ville').val(data.ville_Region);
+                $('#txt_DatePreparation').val(date_Preparation);
+                if (data.circulation == "Réglés") {
+                    $("#SelectedListCirculation").val(1);
+                }
+                else {
+                    $("#SelectedListCirculation").val(2);
+                }
+                if (data.mode_Reglement == "Espece") {
+                    $("#SelectedListModReglement").val(1);
+                }
+                else {
+                    $("#SelectedListModReglement").val(2);
+                }
+                $('#exampleModal').modal('show');
+                $('#btnUpdate').show();
+                $('#btnAdd').hide();
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+
+    }
+    function UpdtePersonnel() {
+
+
+        // LaodSelectListMat();
+        var todayDate = new Date().toISOString().slice(0, 10);
+        var _isproceed = true;
+        //debugger
+        var id = $('#txt_id').val();
+        var date_saisie = dateSaisie;
+        var _frais_Kilometrage = $('#txt_Frais_Kilometrage');
+        var _frais_Deplacement = $('#txt_Frais_Deplacement');
+        var _periode = $('#txt_periode');
+        var _Circulation = $("#SelectedListCirculation  :selected").text();
+        var _dateRegelement = $('#txt_datereglement');
+        var _reprise_Frais = $('#txt_Reprise_Frais');
+        var _dateAvance = $('#txt_dateavance');
+        var _montant_Avance = $('#txt_Montant_Avance');
+        var _mat_PER = $("#SelectedListMat :selected").text();
+        var _ville = $('#txt_Ville');
+        var _mode_Reglement = $("#SelectedListModReglement :selected").text()
+        var _datePreparation = $('#txt_DatePreparation');
+        var _periode_De = $('#txt_periode');
+        var _periode = $('#txt_periode');
+        var _personnel_id = idPersonnel;
+
+        var _nom = $('#txt_Nom');
+        var _code_Analytique = $('#txt_Code_Analytique');
+
+
+        var id = $('#txt_id').val();
+        var date_saisie = todayDate;
+        var frais_Kilometrage = _frais_Kilometrage.val();
+        var frais_Deplacement = _frais_Deplacement.val();
+        var periode = _periode.val();
+        var circulation = $("#SelectedListCirculation  :selected").text();
+        var dateRegelement = _dateRegelement.val();
+        var reprise_Frais = _reprise_Frais.val();
+        var dateAvance = _dateAvance.val();
+        var montant_Avance = _montant_Avance.val();
+        var mat_PER = $("#SelectedListMat :selected").text();
+        var ville = _ville.val();
+        var mode_Reglement = $("#SelectedListModReglement :selected").text()
+        var datePreparation = _datePreparation.val();
+        var periode_De = _periode_De.val();
+        var periode = _periode.val();
+        var personnel_id = valueSelected;
+        var nom = _nom.val();
+        var code_Analytique = _code_Analytique.val();
+
+        if (nom == null || nom == '') {
+            _nom.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _nom.css('border-color', '#ccc')
+        }
+        if (code_Analytique == null || code_Analytique == '') {
+            _code_Analytique.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _code_Analytique.css('border-color', '#ccc')
+        }
+
+        var obj = new Object();
+        obj.iD_Frais = id;
+        obj.date_Saisie = date_saisie;
+        obj.frais_Kilometrique = frais_Kilometrage;
+        obj.fraisDeplacement = frais_Deplacement;
+        obj.periode_Deplacement = periode.split("/").reverse().join("-");
+        obj.Circulation = circulation;
+        obj.date_Regelement = dateRegelement.split("/").reverse().join("-");
+        obj.reprise_Frais = reprise_Frais;
+        obj.date_Avancement = dateAvance.split("/").reverse().join("-");
+        obj.montant_Avance = montant_Avance;
+        obj.mat_PER = mat_PER;
+        obj.ville_Region = ville;
+        obj.mode_Reglement = mode_Reglement;
+        obj.date_Preparation = datePreparation.split("/").reverse().join("-");
+        obj.periode_De = periode_De.split("/").reverse().join("-");
+        obj.periode = periode.split("/").reverse().join("-");
+        obj.personnel_id = valueSelected;
+
+
+        if (_isproceed) {
+
+
+            $.ajax({
+                type: 'PUT',
+                url: 'https://localhost:7146/api/FraisDeplacement/UpdateFraisDeplacement/' + id,
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(obj),
+                async: false,
+                headers: {
+                    'Authorization': 'Bearer '
+                        + sessionStorage.getItem("token")
+                },
+                success: function (data) {
+                    // debugger
+                    // if (data.responseCode == 200) {
+                    // window.location.href = '/Blog';
+                    alert("Update successFuly");
+                    LaodFraisDeplacement();
+
+                    // $('#txt_id').val("");
+                    // LaodSelectListMat();
+                    // $('#txt_Frais_Kilometrage').val("");
+                    // $('#txt_Frais_Deplacement').val("");
+                    // js('#datepickerPeriode').datepicker('setDate', todayDate);
+                    // //$('#txt_datePeriodet').val("aze");
+                    // $('#txt_dateRegelement').text(todayDate);
+                    // $('#txt_Reprise_Frais').val("");
+                    // $('#txt_dateAvance').val(todayDate);
+                    // $('#txt_Montant_Avance').val("");
+                    // $('#txt_Ville').val("");
+                    // $('#txt_datePreparation').val(todayDate);
+
+                    // $("#SelectedListCirculation").val(0);
+                    // $("#SelectedListModReglement").val(0);
+
+
+
+                    $('#exampleModal').modal('hide');
+                    //$("#txt_Matricule").attr("readonly", false);
+                    // }
+                    // else
+                    // {
+                    //     alert("Failed to Save")
+                    // }
+                },
+                faileur: function (error) {
+                }
+            })
+        }
+
+    }
+    function FunRemove(element) {
+
+        var id = $(element).closest('tr').find('#hddenID').val();
+        if (confirm("voulez vous vraiment le supprimer ")) {
+            procedtoRemove(id);
+        }
+
+    }
+    function procedtoRemove(id) {
+
+        $.ajax({
+            type: 'DELETE',
+            url: 'https://localhost:7146/api/FraisDeplacement/DeleteFraisDeplacement/' + id,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function () {
+                // debugger
+                // if (data.responseCode == 200) {
+                LaodFraisDeplacement();
+                alert("Delete successFuly")
+                // }
+                // else
+                // {
+                //     alert("Failed to Save")
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+    }
+    function clearTextBox() {
+        LaodSelectListMat();
+        var _code_Analytique = $('#txt_Code_Analytique');
+        _code_Analytique.css('border-color', '');
+        var _nom = $('#txt_nom');
+        _nom.css('border-color', '')
+        $('#txt_id').val("");
+        $('#txt_Nom').val("");
+        $('#SelectedListMat').val(0);
+        js('#txt_dateavance').val(date);
+        $('#txt_Code_Analytique').val("");
+        $('#txt_Frais_Kilometrage').val("");
+        $('#txt_Frais_Deplacement').val("");
+        $('#txt_periode').val("");
+        $('#txt_datereglement').val(date);
+        $('#txt_Reprise_Frais').val("");
+        $('#txt_dateAvance').val(date);
+        $('#txt_Montant_Avance').val("");
+        $('#txt_Ville').val("");
+        $('#SelectedListCirculation').val(0);
+        $('#SelectedListModReglement').val(0);
+
+
+        $('#txt_DatePreparation').val(date);
+        $("#exampleModalLabel").text("Create");
+        $('#btnUpdate').hide();
+        $('#btnAdd').show();
+    }
+    function GetFraisAvancement() {
+
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Etat/Get_Frais_Avancement',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://localhost:7180/FraisDeplacement/GetEtatAvance',
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    async: false,
+                    headers: {
+                        'Authorization': 'Bearer '
+                            + sessionStorage.getItem("token")
+                    },
+                    success: function (data) {
+
+                    },
+                    faileur: function (error) {
+                    }
+                })
+                GeneratePDF();
+            },
+            faileur: function (error) {
+            }
+        })
+
+    }
+    function GeneratePDF() {
+        location.href = '@Url.Action("GenerateRDLC", "FraisDeplacement")';
+    }
+    function GetFraisModeReglement() {
+        var selectedModReglement = $("#SelectedListModReglement01 option:selected").text()
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Etat/Get_Frais_ParModReglement?mode=' + selectedModReglement,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                        'Authorization': 'Bearer '
+                            + sessionStorage.getItem("token")
+                    },
+            success: function (data) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://localhost:7180/FraisDeplacement/GetEtatModeRegelement',
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    
+                    data: JSON.stringify(data),
+                    async: false,
+                    success: function (data) {
+
+                    },
+                    faileur: function (error) {
+                    }
+                })
+
+                GeneratePDFModeRegelement();
+                //GeneratePDF();
+            },
+            faileur: function (error) {
+            }
+
+        })
+    }
+    function GeneratePDFModeRegelement() {
+        location.href = '@Url.Action("GenerateRDLCModeRegelement", "FraisDeplacement")';
+    }
+    function GetFraisCirculationt() {
+        var selectedCirculation = $("#exampleModalCirculation option:selected").text()
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Etat/Get_Frais_Circulation?etat=' + selectedCirculation,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://localhost:7180/FraisDeplacement/GetEtatCirculation',
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    async: false,
+                    success: function (data) {
+
+                    },
+                    faileur: function (error) {
+                    }
+                })
+
+                GenerateRDLC_Circulation();
+                //GeneratePDF();
+            },
+            faileur: function (error) {
+            }
+
+        })
+    }
+    function GenerateRDLC_Circulation() {
+        location.href = '@Url.Action("GenerateRDLC_Circulation", "FraisDeplacement")';
+    }
+    function GetFraisAnt() {
+
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Etat/Get_Frais_ANT',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://localhost:7180/FraisDeplacement/GetEtatFraisANT',
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    async: false,
+                    headers: {
+                        'Authorization': 'Bearer '
+                            + sessionStorage.getItem("token")
+                    },
+                    success: function (data) {
+
+                    },
+                    faileur: function (error) {
+                    }
+                })
+
+                GenerateRDLC_FraisANT();
+                //GeneratePDF();
+            },
+            faileur: function (error) {
+            }
+
+        })
+    }
+    function GenerateRDLC_FraisANT() {
+        location.href = '@Url.Action("GenerateRDLC_FraisANT", "FraisDeplacement")';
+    }
+    function GetFraisProvision() {
+
+        var _datedebut = $('#txt_DateDebut');
+        var datedebut = _datedebut.val();
+        var dateD = datedebut.split("/").reverse().join("-");
+
+
+        var _dateFin = $('#txt_DateFin');
+        var dateFin = _dateFin.val();
+        var dateF = dateFin.split("/").reverse().join("-");
+        $.ajax({
+            type: 'GET',
+            url: `https://localhost:7146/api/Etat/Get_Frais_Provision?datedebut=${dateD}&dateFin=${dateF}`,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://localhost:7180/FraisDeplacement/GetEtatFraisProv',
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    async: false,
+                    headers: {
+                        'Authorization': 'Bearer '
+                            + sessionStorage.getItem("token")
+                    },
+                    success: function (data) {
+
+                    },
+                    faileur: function (error) {
+                    }
+                })
+
+                GenerateRDLC_FraisProv();
+
+            },
+            faileur: function (error) {
+            }
+
+        })
+    }
+    function GenerateRDLC_FraisProv() {
+        location.href = '@Url.Action("GenerateRDLC_FraisProv", "FraisDeplacement")';
+    }
+</script>

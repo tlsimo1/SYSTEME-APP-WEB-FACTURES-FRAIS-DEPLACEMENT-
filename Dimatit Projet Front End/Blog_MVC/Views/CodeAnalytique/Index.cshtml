@@ -1,0 +1,342 @@
+﻿<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <div class="row">
+                            <input type="hidden" class="form-control" id="txt_id" />
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Activite_Service</label>
+                                    <input class="form-control"  id="txt_Activite_Service" />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>CodeAnalytique</label>
+                                    <input class="form-control" id="txt_CodeAnalytique" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="SaveCodeAnalytique()">Add</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="UpdteCodeAnalytique();">Update</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h2>Code Analytique List</h2>
+    </div>
+    <div class="card-body">
+       @* <div class="card-title">
+            <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="clearTextBox();">
+                Add Code Analytique
+            </a>
+
+            <a asp-controller="Blog" asp-action="Create" class="btn btn-success">Add New</a> 
+        </div>*@
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered" id="CodeAnalytiqueTable">
+                    <thead>
+                        <tr>
+                            <th>Activite Service</th>
+                            <th>Code Analytique</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css" />
+<script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+<script type="text/javascript">
+    var js = jQuery.noConflict(true);
+    js(document).ready(function () {
+        LaodCodeAnalytique();
+        
+    });
+
+    function LaodCodeAnalytique() {
+
+        tableData = [];
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/CodeAnalytique',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.each(data, function (key, value) {
+                    var _edit = "<a class='btn btn-primary' onclick='FunEdit(this)'>Edit</a>"
+                    var _remove = "<a class='btn btn-danger' onclick='FunRemove(this)'>Remove</a>"
+                    var _hddn = "<input type='hidden' id='hddenID' value=" + value.iD_Analytique + " >"
+                    var _action = _hddn + _edit + " | " + _remove;
+                    tableData.push([value.activite_Service, value.codeAnalytique, _action]);
+                })
+
+            },
+            complete: function (xhr) {
+                
+                if (xhr.status == "401") {
+                    location.href = '@Url.Action("LogIn", "LogIn")';
+                }
+                // else
+                // {
+                //     location.href = '@Url.Action("PageNotFound", "LogIn")';
+                // }
+            },
+            faileur: function (error) {
+                debugger
+            }
+        });
+        js('#CodeAnalytiqueTable').DataTable({
+            data: tableData,
+            "bDestroy": true
+        });
+    }
+
+
+
+
+
+    function SaveCodeAnalytique() {
+        
+        var _isproceed = true;
+        var _activite_Service = $('#txt_Activite_Service');
+        var _iD_Analytique = $('#txt_id');
+        var _codeAnalytique = $('#txt_CodeAnalytique');
+
+
+        var activite_Service = _activite_Service.val();
+        var codeAnalytique = _codeAnalytique.val();
+        var iD_Analytique = _iD_Analytique.val();
+
+        if (activite_Service == null || activite_Service == '') {
+            _activite_Service.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _activite_Service.css('border-color', '#ccc')
+        }
+        if (codeAnalytique == null || codeAnalytique == '') {
+            _codeAnalytique.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _codeAnalytique.css('border-color', '#ccc')
+        }
+
+
+        if (_isproceed) {
+
+
+            var obj = new Object();
+            obj.activite_Service = activite_Service;
+            obj.codeAnalytique = codeAnalytique;
+            obj.iD_Analytique = 0;
+
+            $.ajax({
+                type: 'POST',
+                url: 'https://localhost:7146/api/CodeAnalytique/CreateCodeAnalytique',
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(obj),
+                async: false,
+                headers: {
+                    'Authorization': 'Bearer '
+                        + sessionStorage.getItem("token")
+                },
+                success: function (data) {
+                    $('#exampleModal').modal('hide');
+                    LaodCodeAnalytique();
+                },
+                faileur: function (error) {
+                }
+            })
+
+
+        }
+    }
+    function FunEdit(element) {
+        
+        var id = $(element).closest('tr').find('#hddenID ').val();
+        //clearTextBox();
+        var _activite_Service = $('#txt_Activite_Service');
+        _activite_Service.css('border-color', '');
+        var _codeAnalytique = $('#txt_CodeAnalytique');
+        _codeAnalytique.css('border-color', '')
+        //var id = $('#txt_id').val();
+        // if (id=!null && id=!'')
+        // {
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/CodeAnalytique/GetCodeAnaytiqueById/'+ id,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                // if (data!=null)
+                // {
+                $("#exampleModalLabel").text("Update");
+                $('#txt_id').val(data.iD_Analytique);
+                $('#txt_Activite_Service').val(data.activite_Service);
+                $('#txt_CodeAnalytique').val(data.codeAnalytique);
+
+                $('#exampleModal').modal('show');
+                $('#btnUpdate').show();
+                $('#btnAdd').hide();
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+
+    }
+    function UpdteCodeAnalytique() {
+
+        var id = $('#txt_id').val();
+        var _isproceed = true;
+        var _activite_Service = $('#txt_Activite_Service');
+        var _codeAnalytique = $('#txt_CodeAnalytique');
+
+
+        var activite_Service = _activite_Service.val();
+        var codeAnalytique = _codeAnalytique.val();
+
+        if (activite_Service == null || activite_Service == '') {
+            _activite_Service.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _activite_Service.css('border-color', '#ccc')
+        }
+        if (codeAnalytique == null || codeAnalytique == '') {
+            _codeAnalytique.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _codeAnalytique.css('border-color', '#ccc')
+        }
+
+
+        if (_isproceed) {
+            var obj = new Object();
+            obj.activite_Service = activite_Service;
+            obj.codeAnalytique = codeAnalytique;
+            obj.iD_Analytique = 0;
+
+            $.ajax({
+                type: 'PUT',
+                url: 'https://localhost:7146/api/CodeAnalytique/UpdateCodeAnalytique/' + id,
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(obj),
+                async: false,
+                headers: {
+                    'Authorization': 'Bearer '
+                        + sessionStorage.getItem("token")
+                },
+                success: function (data) {
+                    // debugger
+                    // if (data.responseCode == 200) {
+                    // window.location.href = '/Blog';
+                    alert("Update successFuly");
+                    LaodCodeAnalytique();
+                    $('#txt_id').val("");
+                    $('#txt_Activite_Service').val("");
+                    $('#txt_CodeAnalytique').val("");
+                    $('#exampleModal').modal('hide');
+                    // }
+                    // else
+                    // {
+                    //     alert("Failed to Save")
+                    // }
+                },
+                faileur: function (error) {
+                }
+            })
+        }
+
+    }
+    function FunRemove(element) {
+
+        var id = $(element).closest('tr').find('#hddenID').val();
+        if (confirm("voulez vous vraiment le supprimer ")) {
+            procedtoRemove(id);
+        }
+
+    }
+    function procedtoRemove(id) {
+
+        $.ajax({
+            type: 'DELETE',
+            url: 'https://localhost:7146/api/CodeAnalytique/DeleteCodeAnalytique/' + id,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function () {
+                // debugger
+                // if (data.responseCode == 200) {
+                LaodCodeAnalytique();
+                alert("Delete successFuly")
+                // }
+                // else
+                // {
+                //     alert("Failed to Save")
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+    }
+
+    function clearTextBox() {
+
+        var _activite_Service = $('#txt_Activite_Service');
+        _activite_Service.css('border-color', '');
+        var _codeAnalytique = $('#txt_CodeAnalytique');
+        _codeAnalytique.css('border-color', '')
+
+        $("#exampleModalLabel").text("Create");
+        $('#txt_id').val("");
+        $('#txt_Activite_Service').val("");
+        $('#txt_CodeAnalytique').val("");
+        $('#btnUpdate').hide();
+        $('#btnAdd').show();
+    }
+
+</script>

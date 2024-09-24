@@ -1,0 +1,433 @@
+﻿<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <input type="hidden" class="form-control" id="txt_id" />
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Matricule</label>
+                                    <input class="form-control" readonly  id="txt_Matricule" />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Nom</label>
+                                    <input class="form-control" id="txt_Nom" />
+                                </div>
+                            </div>
+                            @*<div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Activite_Service</label>
+                                    <input class="form-control" id="txt_Activite_Service" />
+                                </div>
+                            </div>*@
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Analytique_id</label>
+                                    @*<input class="form-control" id="txt_Analytique_id" />*@
+                                    <select class="form-select" id="SelectedList" aria-label="Default select example">
+                                    </select>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="SavePersonnel()">Add</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="UpdtePersonnel();">Update</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+   @* <div class="card-header">
+        <h2>Personnel List</h2>
+    </div>*@
+    <div class="card-body">
+        <div class="card-title">
+            <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="clearTextBox();">
+                Add Personnel
+            </a>
+
+            @* <a asp-controller="Blog" asp-action="Create" class="btn btn-success">Add New</a> *@
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered" id="PersonnelTable">
+                    <thead>
+                        <tr>
+                            <th>Matricule</th>
+                            <th>Nom</th>
+                            <th>Activite_Service</th>
+                            @*<th>Analytique_id</th>*@
+                            <th>Action</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css" />
+<script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+<script type="text/javascript">
+    var js=jQuery.noConflict(true);
+    js(document).ready(function () {
+        //GetInfoUser();
+        LaodPersonnel();
+        LaodSelectList();
+    });
+    function disableAtribut()
+    {
+        $("#txt_Matricule").attr("readonly", false);
+    }
+    function LaodPersonnel() {
+        
+        tableData = [];
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Personnel',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.each(data, function (key, value) {
+                    var _edit = "<a class='btn btn-primary' onclick='FunEdit(this)'>Edit</a>"
+                    var _remove = "<a class='btn btn-danger' onclick='FunRemove(this)'>Remove</a>"
+                    var _hddn = "<input type='hidden' id='hddenID' value=" + value.iD_Personnel + " >"
+                    var _action = _hddn + _edit + " | " + _remove;
+                    tableData.push([value.matricule, value.nom, value.activite_Service, _action]);
+                })
+                //GetInfoUser(sessionStorage.getItem("token"), sessionStorage.getItem("username"), sessionStorage.getItem("Roles"));
+            },
+            complete: function (xhr) {
+                if (xhr.status == "401") {
+                    location.href = '@Url.Action("LogIn", "LogIn")';
+                }
+                // else {
+                //     location.href = '@Url.Action("PageNotFound", "LogIn")';
+                // }
+            },
+            faileur: function (error) {
+            }
+        });
+        js('#PersonnelTable').DataTable({
+            data: tableData,
+            "bDestroy": true
+        });
+    }
+
+    //function GetInfoUser() {
+    //    var obj = new Object();
+    //        obj.teken = sessionStorage.getItem("token");
+    //        obj.username = sessionStorage.getItem("username");
+    //        obj.roles = sessionStorage.getItem("Roles");
+
+    //    $.ajax({
+    //        type: 'POST',
+    //        url: 'https://localhost:7180/Personnel/GetInfoUser',s
+    //        contentType: "application/json;charset=utf-8",
+    //        dataType: "json",
+    //            data: JSON.stringify(obj),
+    //        async: false,
+    //        success: function (data) {
+                
+    //        },
+    //        faileur: function (error) {
+    //        }
+    //    })
+    //}
+
+    function LaodSelectList() {
+
+           $('#SelectedList option').remove();
+           $('#SelectedList').append("<option value=''>Select</option>");
+
+            $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/CodeAnalytique',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+         
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.each(data, function (key, value) {
+                   $('#SelectedList').append("<option value='" + value.iD_Analytique + "'>"+value.codeAnalytique+"</option>");
+                })
+            },
+            faileur: function (error) {
+            }
+        })
+       
+    }
+
+    function SavePersonnel() {
+        
+        var _isproceed = true;
+        var _matricule = $('#txt_Matricule');
+        var _iD_Personnel = $('#txt_id');
+        var _nom = $('#txt_Nom');
+        var _activite_Service = $('#txt_Activite_Service');
+        var _analytique_id = $('#SelectedList');
+
+        var matricule = _matricule.val();
+        var nom = _nom.val();
+        var activite_Service = _activite_Service.val();
+        var analytique_id = _analytique_id.val();
+        var iD_Personnel = _iD_Personnel.val();
+        if (matricule == null || matricule == '') {
+            _matricule.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _matricule.css('border-color', '#ccc')
+        }
+        if (nom == null || nom == '') {
+            _nom.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _nom.css('border-color', '#ccc')
+        }
+
+
+        if (_isproceed) {
+            
+           
+            var obj = new Object();
+            obj.matricule = matricule;
+            obj.nom = nom;
+            obj.activite_Service = '';
+            obj.analytique_id = analytique_id
+            obj.iD_Personnel=0;
+
+            $.ajax({
+                type: 'POST',
+                url: 'https://localhost:7146/api/Personnel/CreatePersonnel',
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(obj),
+                async: false,
+                headers: {
+                    'Authorization': 'Bearer '
+                        + sessionStorage.getItem("token")
+                },
+                success: function (data) {
+                    $('#exampleModal').modal('hide');
+                    LaodPersonnel();
+                },
+                faileur: function (error) {
+                }
+            })
+             
+              
+        }
+    }
+    function FunEdit(element) {
+        
+        $("#txt_Matricule").attr("readonly", true);
+        var id = $(element).closest('tr').find('#hddenID ').val();
+        //clearTextBox();
+        var _matricule = $('#txt_Matricule');
+        _matricule.css('border-color', '');
+        var _nom = $('#txt_Nom');
+        _nom.css('border-color', '')
+        //var id = $('#txt_id').val();
+        // if (id=!null && id=!'')
+        // {
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Personnel/GetPersonnelById/' + id,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+                
+                // if (data!=null)
+                // {
+                $("#exampleModalLabel").text("Update");
+                $('#txt_id').val(data.iD_Personnel);
+                $('#txt_Matricule').val(data.matricule);
+                $('#txt_Nom').val(data.nom);
+                $('#txt_Activite_Service').val(data.activite_Service);
+                if (data.activite_Service == 0) {
+                    $('#txt_Activite_Service').val('');
+                }
+                else {
+                    $('#SelectedList').val(data.activite_Service);
+                }
+                if (data.analytique_id==0) {
+                    $('#SelectedList').val('');
+                }
+                else{
+                    $('#SelectedList').val(data.analytique_id);
+                }
+                
+                $('#exampleModal').modal('show');
+                $('#btnUpdate').show();
+                $('#btnAdd').hide();
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+            
+    }
+    function UpdtePersonnel() {
+        
+        var id = $('#txt_id').val();
+        var _isproceed = true;
+        var _matricule= $('#txt_Matricule');
+        var _nom = $('#txt_Nom');
+        var _activite_Service = $('#txt_Activite_Service');
+        var _analytique_id = $('#SelectedList');
+
+        var matricule = _matricule.val();
+        var nom = _nom.val();
+        var activite_Service = _activite_Service.val();
+        var analytique_id = _analytique_id.val();
+
+        if (matricule == null || matricule == '') {
+            _matricule.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _matricule.css('border-color', '#ccc')
+        }
+        if (nom == null || nom == '') {
+            _nom.css('border-color', 'red')
+            _isproceed = false;
+        }
+        else {
+            _nom.css('border-color', '#ccc')
+        }
+        
+
+        if (_isproceed) {
+            var obj = new Object();
+            obj.matricule = matricule;
+            obj.nom = nom;
+            obj.activite_Service = '';
+            obj.analytique_id = analytique_id;
+
+            $.ajax({
+                type: 'PUT',
+                url: 'https://localhost:7146/api/Personnel/UpdatePersonnel/' + id,
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(obj),
+                async: false,
+                headers: {
+                    'Authorization': 'Bearer '
+                        + sessionStorage.getItem("token")
+                },
+                success: function (data) {
+                    // debugger
+                    // if (data.responseCode == 200) {
+                   // window.location.href = '/Blog';
+                    alert("Update successFuly");
+                    LaodPersonnel();
+                    $('#txt_id').val("");
+                    $('#txt_Matricule').val("");
+                    $('#txt_Nom').val("");
+                    $('#txt_Activite_Service').val("");
+                    $('#txt_Analytique_id').val("");
+                    $('#exampleModal').modal('hide');
+                    $("#txt_Matricule").attr("readonly", false);
+                    // }
+                    // else
+                    // {
+                    //     alert("Failed to Save")
+                    // }
+                },
+                faileur: function (error) {
+                }
+            })
+        }
+
+    }
+    function FunRemove(element) {
+
+        var id = $(element).closest('tr').find('#hddenID').val();
+        if(confirm("voulez vous vraiment le supprimer "))
+        {
+            procedtoRemove(id);
+        }
+        
+    }
+    function procedtoRemove(id) {
+
+        $.ajax({
+            type: 'DELETE',
+            url: 'https://localhost:7146/api/Personnel/DeletePersonnel/' + id,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function () {
+                // debugger
+                // if (data.responseCode == 200) {
+                LaodPersonnel();
+                alert("Delete successFuly")
+                // }
+                // else
+                // {
+                //     alert("Failed to Save")
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+    }
+
+    function clearTextBox() {
+        var _matricule = $('#txt_Matricule');
+        _matricule.css('border-color', '');
+        var _nom = $('#txt_nom');
+        _nom.css('border-color', '')
+        $("#exampleModalLabel").text("Create");
+        $('#txt_id').val("");
+        $('#txt_Nom').val("");
+        $('#txt_Matricule').val("");
+        $('#txt_Activite_Service').val("");
+        $('#SelectedList').val("");
+        $("#txt_Matricule").attr("readonly", false);
+        $('#txt_Analytique_id').val("");
+        $('#btnUpdate').hide();
+        $('#btnAdd').show();
+    }
+    
+</script>

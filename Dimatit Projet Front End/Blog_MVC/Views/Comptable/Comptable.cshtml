@@ -1,0 +1,436 @@
+﻿<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Détail
+
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <input type="hidden" class="form-control" id="txt_id" />
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Numéro Facture</label>
+                                    <input id="txt_numerofacture" readonly class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Fournisseur</label>
+                                    <input id="txt_fournissuer" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Date Facture</label>
+                                        <input id="txt_dteFac" type="text" readonly class="form-control" aria-label="Date de Saisie">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Total TTC</label>
+                                    <input id="txt_totalttc" type="text" readonly class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Statut Bureau D'ordre</label>
+                                    <input id="txt_Statutbdr" type="text" readonly class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date Saisi Bureau D'ordre </label>
+                                    <input id="dte_bdr" type="text" readonly class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Statut Assistante DAF</label>
+                                    <input id="txt_statutAss" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date Saisi Assistante DAF</label>
+                                    <input id="dte_Ass" type="text" readonly class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Statut Chef Comptable</label>
+                                    <input id="txt_statutchef" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date Saisi Chef Comptable</label>
+                                    <input id="dte_chef" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Statut Comptablité</label>
+                                    <input id="txt_cmp" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date Saisi Comptabilité</label>
+                                    <input id="dte_cmp" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Statut Achat</label>
+                                    <input id="txt_statutachat" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date Saisi Achat</label>
+                                    <input id="dte_achat" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Statut Comptabilisation</label>
+                                    <input id="txt_statutcomptabilisation" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date Saisi Comptabilisation</label>
+                                    <input id="dte_comptabilisation" readonly type="text" class="form-control" aria-label="Date de Saisie">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card">
+
+    <div class="card-body">
+        <div class="card-title">
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered" id="FactureTable">
+                    <thead>
+                        <tr>
+
+
+                            <th>Numero Facture</th>
+                            <th>Fournisseur</th>
+                            <th>Date Facture</th>
+
+                            <th>Total TTC</th>
+                            <th>Bureau D'ordre Statut</th>
+                            <th>Date Saisie</th>
+
+                            <th>Assitante DAF Statut</th>
+                            <th>dateDaf</th>
+
+                            <th>Statut Chef Comptable</th>
+                            <th>Date Saisie</th>
+
+                            <th>Statut Comptabilité</th>
+                            <th>Date Saisie</th>
+
+                            <th>statut Achat</th>
+                            <th>Date Saisie</th>
+
+                            <th>Statut Comptabilisation</th>
+                            <th>Date Comptabilisation</th>
+
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css" />
+<script type="text/javascript" charset="utf-8" src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+<script type="text/javascript">
+    var js = jQuery.noConflict(true);
+    var date = new Date();
+    var dateSaisie;
+    //date = new Date(date);
+    date = ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' +
+        ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1)))
+        + '/' + date.getFullYear();
+    //<input type="text" value = "today();" id = "datepicker" />
+    js(document).ready(function () {
+        js('#txt_dateFacture').val(date);
+        js('#datepickerDateFacture01').datepicker({
+            format: 'dd/mm/yyyy',
+            "setDate": new Date(),
+            "autoclose": true
+        });
+        LaodFactureComptable();
+    });
+    function LaodFactureComptable() {
+
+        tableData = [];
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Comptabilite/GetAllFacturesCmp',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+             headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+
+                $.each(data, function (key, value) {
+                    var _edit = "<a class='btn btn-primary' onclick='FunEdit(this)'>Valider</a>"
+                    var _remove = "<a class='btn btn-danger' onclick='View(this)'>View</a>"
+                    var _hddn = "<input type='hidden' id='hddenID' value=" + value.iD_facture + " >"
+                    var _hddn2 = "<input type='hidden' id='idAssDAF' value=" + value.id + " >"
+                    var _action = _hddn + _hddn2 + _edit + " | " + _remove;
+                    tableData.push([
+
+
+                        value.numFacture,
+                        value.fournisseur,
+                        value.date_Facture,
+
+                        value.totalTTC,
+                        value.statut_BureauOrdre,
+                        value.date_Saisie,
+
+                        value.statut_AssitanteDAF,
+                        value.dateDaf,
+                        value.statut_ChefComptable,
+
+                        value.dateChef,
+                        value.statut_Comptabilite,
+                        value.datecmp,
+
+                        value.statut_Achat,
+                        value.dateAchat,
+                        value.statut_Comptabilisation,
+                        value.dateComptabilisation,
+                        _action
+                    ]);
+
+                })
+            },
+            complete: function (xhr) {
+                if (xhr.status == "401") {
+                    location.href = '@Url.Action("LogIn", "LogIn")';
+                }
+                // else {
+                //     location.href = '@Url.Action("PageNotFound", "LogIn")';
+                // }
+            },
+            faileur: function (error) {
+            }
+        })
+        js('#FactureTable').DataTable({
+            data: tableData,
+            "scrollX": true,
+            "bDestroy": true,
+
+        })
+    }
+    function FunEdit(element) {
+
+
+        var id = $(element).closest('tr').find('#hddenID').val();
+        alert(id);
+        //var _matricule = $('#txt_Matricule');
+        //_matricule.css('border-color', '');
+        //var _nom = $('#txt_Nom');
+        //_nom.css('border-color', '')
+        //var id = $('#txt_id').val();
+        // if (id=!null && id=!'')
+        // {
+        $.ajax({
+            type: 'Put',
+            url: 'https://localhost:7146/api/Comptabilite/Edit_StatusCmp?id=' + id,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+            headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+                alert("Facture Validée");
+                LaodFactureComptable();
+            },
+            faileur: function (error) {
+            }
+        })
+    }
+
+    function View(element) {
+
+        var numFacAss = $(element).closest('tr').find('#idAssDAF ').val();
+
+        $.ajax({
+            type: 'GET',
+            url: 'https://localhost:7146/api/Comptabilite/GetFactureCmp?numFacture=' + numFacAss,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            async: false,
+             headers: {
+                'Authorization': 'Bearer '
+                    + sessionStorage.getItem("token")
+            },
+            success: function (data) {
+                
+
+                $.each(data, function (key, value) {
+                    
+                    var dateFacture = new Date(value.date_Facture);
+                    dateFacture = ((dateFacture.getDate() > 9) ? dateFacture.getDate() : ('0' + dateFacture.getDate())) + '/' +
+                        ((dateFacture.getMonth() > 8) ? (dateFacture.getMonth() + 1) : ('0' + (dateFacture.getMonth() + 1)))
+                        + '/' + dateFacture.getFullYear();
+
+                    var dateSaisi = new Date(value.date_Saisie);
+                    dateSaisi = ((dateSaisi.getDate() > 9) ? dateSaisi.getDate() : ('0' + dateSaisi.getDate())) + '/' +
+                        ((dateSaisi.getMonth() > 8) ? (dateSaisi.getMonth() + 1) : ('0' + (dateSaisi.getMonth() + 1)))
+                        + '/' + dateSaisi.getFullYear();
+
+                    var dateCmp = new Date(value.datecmp);
+                    dateCmp = ((dateCmp.getDate() > 9) ? dateCmp.getDate() : ('0' + dateCmp.getDate())) + '/' +
+                        ((dateCmp.getMonth() > 8) ? (dateCmp.getMonth() + 1) : ('0' + (dateCmp.getMonth() + 1)))
+                        + '/' + dateCmp.getFullYear();
+
+                    var dateComptabilisation = new Date(value.dateComptabilisation);
+                    dateComptabilisation = ((dateComptabilisation.getDate() > 9) ? dateComptabilisation.getDate() : ('0' + dateComptabilisation.getDate())) + '/' +
+                        ((dateComptabilisation.getMonth() > 8) ? (dateComptabilisation.getMonth() + 1) : ('0' + (dateComptabilisation.getMonth() + 1)))
+                        + '/' + dateComptabilisation.getFullYear();
+
+                    var datehef = new Date(value.dateChef);
+                    datehef = ((datehef.getDate() > 9) ? datehef.getDate() : ('0' + datehef.getDate())) + '/' +
+                        ((datehef.getMonth() > 8) ? (datehef.getMonth() + 1) : ('0' + (datehef.getMonth() + 1)))
+                        + '/' + datehef.getFullYear();
+
+                    var dateSaisiDAF = new Date(value.dateDaf);
+                    dateSaisiDAF = ((dateSaisiDAF.getDate() > 9) ? dateSaisiDAF.getDate() : ('0' + dateSaisiDAF.getDate())) + '/' +
+                        ((dateSaisiDAF.getMonth() > 8) ? (dateSaisiDAF.getMonth() + 1) : ('0' + (dateSaisiDAF.getMonth() + 1)))
+                        + '/' + dateSaisiDAF.getFullYear();
+
+                    var dateAchat = new Date(value.dateAchat);
+                    dateAchat = ((dateAchat.getDate() > 9) ? dateAchat.getDate() : ('0' + dateAchat.getDate())) + '/' +
+                        ((dateAchat.getMonth() > 8) ? (dateAchat.getMonth() + 1) : ('0' + (dateAchat.getMonth() + 1)))
+                        + '/' + dateAchat.getFullYear();
+                    alert(dateCmp);
+                    $('#txt_id').val(value.iD_facture);
+                    $("#exampleModalLabel").text("Détail Facture");
+                    $('#txt_numerofacture').val(value.numFacture);
+                    $('#txt_fournissuer').val(value.fournisseur);
+                    $('#txt_dteFac').val(dateFacture);
+                    $('#txt_totalttc').val(value.totalTTC);
+
+                    $('#txt_Statutbdr').val(value.statut_BureauOrdre);
+                    if (dateSaisi === '0001-01-01T00:00:00') {
+                        $('#dte_bdr').val('NULL');
+                    }
+                    else {
+                        $('#dte_bdr').val(dateSaisi);
+                    }
+
+                    $('#txt_statutAss').val(value.statut_AssitanteDAF);
+                    if (dateSaisiDAF === '0001-01-01T00:00:00') {
+                        $('#dte_Ass').val('NULL');
+                    }
+                    else {
+                        $('#dte_Ass').val(dateSaisiDAF);
+                    }
+
+                    $('#txt_statutchef').val(value.statut_AssitanteDAF);
+
+
+                    if (datehef === '0001-01-01T00:00:00') {
+                        $('#dte_chef').val('NULL');
+                    }
+                    else {
+                        $('#dte_chef').val(datehef);
+                    }
+
+                    $('#txt_cmp').val(value.statut_Comptabilite);
+                    if (value.datecmp === '0001-01-01T00:00:00') {
+                        $('#dte_cmp').val('NULL');
+                    }
+                    else {
+                        $('#dte_cmp').val(dateCmp);
+                    }
+
+                    $('#txt_statutachat').val(value.statut_Achat);
+                    if (value.dateAchat === '0001-01-01T00:00:00') {
+                        $('#dte_achat').val('NULL');
+                    }
+                    else {
+                        $('#dte_achat').val(dateAchat);
+                    }
+                    $('#txt_statutcomptabilisation').val(value.statut_Comptabilisation);
+
+                    if (value.dateComptabilisation === '0001-01-01T00:00:00') {
+                        $('#dte_comptabilisation').val('NULL');
+                    }
+                    else {
+                        $('#dte_comptabilisation').val(dateComptabilisation);
+                    }
+                    $('#exampleModal').modal('show');
+                })
+            },
+            faileur: function (error) {
+            }
+        })
+
+    }
+
+</script>

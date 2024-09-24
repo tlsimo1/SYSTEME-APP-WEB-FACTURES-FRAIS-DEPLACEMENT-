@@ -1,0 +1,120 @@
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\CleanArchitecture2\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\CleanArchitecture\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+D:\projets dimatit\All dimatit\CleanArchitecture\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+C:\Users\TLSIMO\Desktop\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.deps.json
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Application.pdb
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.AssemblyInfo.cs
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.csproj.CopyComplete
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\refint\CleanArchitecture.Application.dll
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\CleanArchitecture.Application.pdb
+C:\Users\m.talssi\OneDrive - DIMATIT\Bureau\Nouveau dossier (2)\Dimatit Projet WEB Api\CleanArchitecture.Application\obj\Debug\net7.0\ref\CleanArchitecture.Application.dll

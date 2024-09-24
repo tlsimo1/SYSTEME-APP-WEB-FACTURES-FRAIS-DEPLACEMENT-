@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GetFraisParModeRegelement" targetNamespace="http://tempuri.org/GetFraisParModeRegelement.xsd" xmlns:mstns="http://tempuri.org/GetFraisParModeRegelement.xsd" xmlns="http://tempuri.org/GetFraisParModeRegelement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GetFraisParModeRegelement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="GetFraisParModeRegelement" msprop:Generator_DataSetName="GetFraisParModeRegelement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="get_FraisModeRegelement" msprop:Generator_RowEvHandlerName="get_FraisModeRegelementRowChangeEventHandler" msprop:Generator_RowDeletedName="get_FraisModeRegelementRowDeleted" msprop:Generator_RowDeletingName="get_FraisModeRegelementRowDeleting" msprop:Generator_RowEvArgName="get_FraisModeRegelementRowChangeEvent" msprop:Generator_TablePropName="get_FraisModeRegelement" msprop:Generator_RowChangedName="get_FraisModeRegelementRowChanged" msprop:Generator_RowChangingName="get_FraisModeRegelementRowChanging" msprop:Generator_TableClassName="get_FraisModeRegelementDataTable" msprop:Generator_RowClassName="get_FraisModeRegelementRow" msprop:Generator_TableVarName="tableget_FraisModeRegelement" msprop:Generator_UserTableName="get_FraisModeRegelement">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Circulation" msprop:Generator_ColumnPropNameInRow="Circulation" msprop:Generator_ColumnPropNameInTable="CirculationColumn" msprop:Generator_ColumnVarNameInTable="columnCirculation" msprop:Generator_UserColumnName="Circulation" type="xs:string" minOccurs="0" />
+              <xs:element name="Nom" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_ColumnVarNameInTable="columnNom" msprop:Generator_UserColumnName="Nom" type="xs:string" minOccurs="0" />
+              <xs:element name="Matricule" msprop:Generator_ColumnPropNameInRow="Matricule" msprop:Generator_ColumnPropNameInTable="MatriculeColumn" msprop:Generator_ColumnVarNameInTable="columnMatricule" msprop:Generator_UserColumnName="Matricule" type="xs:string" minOccurs="0" />
+              <xs:element name="ModeReglement" msprop:Generator_ColumnPropNameInRow="ModeReglement" msprop:Generator_ColumnPropNameInTable="ModeReglementColumn" msprop:Generator_ColumnVarNameInTable="columnModeReglement" msprop:Generator_UserColumnName="ModeReglement" type="xs:string" minOccurs="0" />
+              <xs:element name="VilleRegion" msprop:Generator_ColumnPropNameInRow="VilleRegion" msprop:Generator_ColumnPropNameInTable="VilleRegionColumn" msprop:Generator_ColumnVarNameInTable="columnVilleRegion" msprop:Generator_UserColumnName="VilleRegion" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_UserColumnName="Total" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
